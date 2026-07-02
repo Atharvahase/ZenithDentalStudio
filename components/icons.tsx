@@ -1,21 +1,25 @@
 /**
- * The brand's smiling "e" — in the Zenith logo the letter e is drawn as a
- * teal smile arc with a small hook above it. Used inside the ZENITH
- * wordmark so the signature detail carries into the site typography.
+ * The brand's smiling "e", faithful to the Zenith logo: the letter's
+ * crossbar and upper bowl stay in the text colour, and only the bottom
+ * stroke is the teal smile — a wide arc with curled tips at both ends.
  */
+export const SMILE_E = {
+  viewBox: '0 0 36 36',
+  top: 'M4.5 16.5h27a13.5 13.5 0 0 0-27 0',
+  smile: 'M6.5 21.5C3.5 21.5 2.5 23.5 3.2 25.2 9 34 27 34 32.8 25.2 33.5 23.5 32.5 21.5 29.5 21.5',
+}
+
 export function SmileE({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 32 26"
+      viewBox={SMILE_E.viewBox}
       fill="none"
-      stroke="currentColor"
-      strokeWidth="3.4"
       strokeLinecap="round"
       aria-hidden="true"
       className={className}
     >
-      <path d="M18.5 2.2c-3.8.5-5 3.3-3.6 6.3" />
-      <path d="M3 12.5c3.7 6.6 9.1 9.9 13 9.9s9.3-3.3 13-9.9" />
+      <path d={SMILE_E.top} stroke="currentColor" strokeWidth="3.2" />
+      <path d={SMILE_E.smile} stroke="currentColor" strokeWidth="3.6" className="text-brand" />
     </svg>
   )
 }

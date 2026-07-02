@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
+import { SMILE_E } from './icons'
 
 const luxe = [0.22, 1, 0.36, 1] as const
 
@@ -47,24 +48,29 @@ export function Preloader() {
               Z
             </motion.span>
             <svg
-              viewBox="0 0 32 26"
+              viewBox={SMILE_E.viewBox}
               fill="none"
-              stroke="currentColor"
-              strokeWidth="3.4"
               strokeLinecap="round"
-              className="mx-[0.05em] inline-block h-[0.55em] w-auto self-center text-brand"
+              className="mx-[0.04em] inline-block h-[0.68em] w-auto translate-y-[0.12em]"
             >
+              {/* the letter's grey top appears with the other letters */}
               <motion.path
-                d="M3 12.5c3.7 6.6 9.1 9.9 13 9.9s9.3-3.3 13-9.9"
+                d={SMILE_E.top}
+                stroke="currentColor"
+                strokeWidth="3.2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, ease: luxe, delay: 0.12 }}
+              />
+              {/* ...then the teal smile draws itself left to right */}
+              <motion.path
+                d={SMILE_E.smile}
+                stroke="currentColor"
+                strokeWidth="3.6"
+                className="text-brand"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 0.9, ease: luxe, delay: 0.5 }}
-              />
-              <motion.path
-                d="M18.5 2.2c-3.8.5-5 3.3-3.6 6.3"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                transition={{ duration: 0.35, ease: luxe, delay: 1.35 }}
+                transition={{ duration: 1.0, ease: luxe, delay: 0.65 }}
               />
             </svg>
             <motion.span

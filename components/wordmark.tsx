@@ -20,7 +20,7 @@ export function Wordmark({
     >
       <span aria-hidden="true">
         Z
-        <SmileE className="mx-[0.08em] inline-block h-[0.58em] w-auto text-brand" />
+        <SmileE className="mx-[0.08em] inline-block h-[0.66em] w-auto translate-y-[0.08em]" />
         NITH
         {showTagline && <span className={taglineClassName}> · THE DENTAL STUDIO</span>}
       </span>
