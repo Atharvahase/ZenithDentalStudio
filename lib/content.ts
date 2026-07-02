@@ -26,7 +26,9 @@ export const clinic = {
   mapQuery: 'Zenith Dental Studio, College Road, Nashik',
   mapsDirectionsUrl:
     'https://www.google.com/maps/search/?api=1&query=Zenith+Dental+Studio+College+Road+Nashik',
-  googleReviewsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJLwgm0XXr3TsR3_IVZqR5gyU',
+  // Canonical CID deep link — the ?q=place_id: form breaks in the mobile
+  // Maps app. Verified to resolve to the clinic's listing.
+  googleReviewsUrl: 'https://maps.google.com/?cid=2703137948346741471',
   instagram: 'https://www.instagram.com/zenithdentalstudio',
   // 10 am–9 pm confirmed via Google listing; Sunday unconfirmed — TODO(clinic).
   hours: [
