@@ -3,14 +3,19 @@
  * crossbar and upper bowl stay in the text colour, and only the bottom
  * stroke is the teal smile — a wide arc with curled tips at both ends.
  */
+/**
+ * Geometry traced from the logo's pixels (canvas segmentation + run-length
+ * measurement, 2026-07-02): a half-circle arc whose limbs reach down to
+ * crossbar level; the crossbar floats free mid-counter and merges with the
+ * right limb; the teal smile's tips curl inward (caps at top, elbows at the
+ * outer-bottom), teal stroke 25% heavier than the grey.
+ */
 export const SMILE_E = {
   viewBox: '0 0 36 36',
-  // letter-coloured part is the TOP HALF of the e only: a clean semicircle
-  // dome resting on the crossbar. The crossbar stops short on the right,
-  // leaving the e's aperture.
-  top: 'M4.5 17A13.5 13.5 0 0 1 31.5 17M4.5 17H25.5',
-  // teal SMILE forms the whole LOWER curve: a wide grin whose tips curl up.
-  smile: 'M7.8 20.2A3.3 3.3 0 0 0 3.2 24.3C8 33.7 28 33.7 32.8 24.3A3.3 3.3 0 0 0 28.2 20.2',
+  topStroke: 3.2,
+  smileStroke: 4,
+  top: 'M3.2 18A15.6 15.6 0 0 1 34.4 18M18.4 15.6H34.4',
+  smile: 'M6 23.6A2.3 2.3 0 1 0 3 27A21.8 21.8 0 0 0 33 27A2.3 2.3 0 1 0 30 23.6',
 }
 
 export function SmileE({ className }: { className?: string }) {
@@ -22,8 +27,13 @@ export function SmileE({ className }: { className?: string }) {
       aria-hidden="true"
       className={className}
     >
-      <path d={SMILE_E.top} stroke="currentColor" strokeWidth="3.2" />
-      <path d={SMILE_E.smile} stroke="currentColor" strokeWidth="3.6" className="text-brand" />
+      <path d={SMILE_E.top} stroke="currentColor" strokeWidth={SMILE_E.topStroke} />
+      <path
+        d={SMILE_E.smile}
+        stroke="currentColor"
+        strokeWidth={SMILE_E.smileStroke}
+        className="text-brand"
+      />
     </svg>
   )
 }

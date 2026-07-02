@@ -57,7 +57,7 @@ export function Preloader() {
               <motion.path
                 d={SMILE_E.top}
                 stroke="currentColor"
-                strokeWidth="3.2"
+                strokeWidth={SMILE_E.topStroke}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, ease: luxe, delay: 0.12 }}
@@ -66,7 +66,7 @@ export function Preloader() {
               <motion.path
                 d={SMILE_E.smile}
                 stroke="currentColor"
-                strokeWidth="3.6"
+                strokeWidth={SMILE_E.smileStroke}
                 className="text-brand"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
