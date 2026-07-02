@@ -5,11 +5,12 @@
  */
 export const SMILE_E = {
   viewBox: '0 0 36 36',
-  // letter-coloured top: bowl arcs over and descends open past the
-  // crossbar on the right (the e's aperture); crossbar stops short
-  top: 'M4.5 16.5C4.5 8.8 10.3 3.2 18 3.2s13.5 5.6 13.5 13.3c0 1.9-.4 3.7-1.2 5.2M4.5 16.5h23',
-  // teal smile: wide grin, each tip a crisp quarter-arc curling up-inward
-  smile: 'M8.2 20.6A3.4 3.4 0 0 0 3.4 24.6C8 33.8 28 33.8 32.6 24.6A3.4 3.4 0 0 0 27.8 20.6',
+  // letter-coloured part is the TOP HALF of the e only: a clean semicircle
+  // dome resting on the crossbar. The crossbar stops short on the right,
+  // leaving the e's aperture.
+  top: 'M4.5 17A13.5 13.5 0 0 1 31.5 17M4.5 17H25.5',
+  // teal SMILE forms the whole LOWER curve: a wide grin whose tips curl up.
+  smile: 'M7.8 20.2A3.3 3.3 0 0 0 3.2 24.3C8 33.7 28 33.7 32.8 24.3A3.3 3.3 0 0 0 28.2 20.2',
 }
 
 export function SmileE({ className }: { className?: string }) {
