@@ -4,6 +4,7 @@
  * stroke is the teal smile — a wide arc with curled tips at both ends.
  */
 /**
+ * The brand's smiling "e", used ONLY by the loading intro (Preloader).
  * Geometry traced from the logo's pixels (canvas segmentation + run-length
  * measurement, 2026-07-02): a half-circle arc whose limbs reach down to
  * crossbar level; the crossbar floats free mid-counter and merges with the
@@ -16,26 +17,6 @@ export const SMILE_E = {
   smileStroke: 4,
   top: 'M3.2 18A15.6 15.6 0 0 1 34.4 18M18.4 15.6H34.4',
   smile: 'M6 23.6A2.3 2.3 0 1 0 3 27A21.8 21.8 0 0 0 33 27A2.3 2.3 0 1 0 30 23.6',
-}
-
-export function SmileE({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox={SMILE_E.viewBox}
-      fill="none"
-      strokeLinecap="round"
-      aria-hidden="true"
-      className={className}
-    >
-      <path d={SMILE_E.top} stroke="currentColor" strokeWidth={SMILE_E.topStroke} />
-      <path
-        d={SMILE_E.smile}
-        stroke="currentColor"
-        strokeWidth={SMILE_E.smileStroke}
-        className="text-brand"
-      />
-    </svg>
-  )
 }
 
 /** Instagram glyph — lucide-react v1 removed brand icons, so it lives here. */

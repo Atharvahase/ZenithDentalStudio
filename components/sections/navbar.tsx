@@ -5,7 +5,6 @@ import { Menu, X } from 'lucide-react'
 import { clinic, waMessages } from '@/lib/content'
 import { waLink } from '@/lib/whatsapp'
 import { WhatsAppIcon } from '@/components/icons'
-import { Wordmark } from '@/components/wordmark'
 
 const links = [
   { href: '#treatments', label: 'Treatments' },
@@ -52,10 +51,9 @@ export function Navbar() {
             height={320}
             className="size-9 rounded-full border border-hairline bg-white object-cover"
           />
-          <Wordmark
-            className="text-sm text-ink"
-            taglineClassName="hidden text-champagne sm:inline"
-          />
+          <span className="font-display text-sm font-medium tracking-[0.28em] text-ink">
+            ZENITH<span className="hidden text-champagne sm:inline"> · THE DENTAL STUDIO</span>
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
