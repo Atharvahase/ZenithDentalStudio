@@ -14,9 +14,10 @@
 export const SMILE_E = {
   viewBox: '0 0 36 36',
   topStroke: 3.2,
-  smileStroke: 4,
-  top: 'M3.2 18A15.6 15.6 0 0 1 34.4 18M18.4 15.6H34.4',
-  smile: 'M6 23.6A2.3 2.3 0 1 0 3 27A21.8 21.8 0 0 0 33 27A2.3 2.3 0 1 0 30 23.6',
+  smileStroke: 3.8,
+  // grey uses flat (butt) terminals like the logo; teal uses round caps
+  top: 'M3.4 17.4A15.4 15.4 0 0 1 34.2 17.4M16.8 15.6H35',
+  smile: 'M6.4 23.5A2.55 2.55 0 1 0 2.9 27.2A21.8 21.8 0 0 0 33.1 27.2A2.55 2.55 0 1 0 29.6 23.5',
 }
 
 /** Instagram glyph — lucide-react v1 removed brand icons, so it lives here. */

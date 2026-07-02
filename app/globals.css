@@ -112,7 +112,7 @@ footer[id] {
 }
 
 .preloader {
-  animation: preloader-hide 0.6s ease 3.8s forwards;
+  animation: preloader-hide 0.6s ease 4.4s forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

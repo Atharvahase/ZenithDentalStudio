@@ -7,7 +7,7 @@ import { SMILE_E } from './icons'
 const luxe = [0.22, 1, 0.36, 1] as const
 
 /** Curtain lifts at this point — hero entrances (INTRO in hero.tsx) sync to it. */
-const EXIT_AT_MS = 2600
+const EXIT_AT_MS = 3000
 
 /**
  * Brand intro modeled on the studio signage: the name "Zenith" appears,
@@ -50,7 +50,6 @@ export function Preloader() {
             <svg
               viewBox={SMILE_E.viewBox}
               fill="none"
-              strokeLinecap="round"
               className="mx-[0.04em] inline-block h-[0.68em] w-auto translate-y-[0.12em]"
             >
               {/* the letter's grey top appears with the other letters */}
@@ -58,19 +57,21 @@ export function Preloader() {
                 d={SMILE_E.top}
                 stroke="currentColor"
                 strokeWidth={SMILE_E.topStroke}
+                strokeLinecap="butt"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, ease: luxe, delay: 0.12 }}
               />
-              {/* ...then the teal smile draws itself left to right */}
+              {/* ...then the teal smile draws itself left to right, unhurried */}
               <motion.path
                 d={SMILE_E.smile}
                 stroke="currentColor"
                 strokeWidth={SMILE_E.smileStroke}
+                strokeLinecap="round"
                 className="text-brand"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 1.0, ease: luxe, delay: 0.65 }}
+                transition={{ duration: 1.3, ease: luxe, delay: 0.65 }}
               />
             </svg>
             <motion.span
@@ -86,7 +87,7 @@ export function Preloader() {
             className="font-display text-sm font-medium tracking-[0.42em] text-champagne sm:text-base"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: luxe, delay: 1.35 }}
+            transition={{ duration: 0.55, ease: luxe, delay: 1.75 }}
           >
             THE DENTAL STUDIO
           </motion.p>
