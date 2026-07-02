@@ -7,7 +7,7 @@
  */
 
 export const clinic = {
-  name: 'Zenith Dental Studio',
+  name: 'Zenith The Dental Studio',
   shortName: 'Zenith',
   city: 'Nashik',
   // WhatsApp Business number in E.164 digits (+91 92255 25606).

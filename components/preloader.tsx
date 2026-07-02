@@ -39,7 +39,7 @@ export function Preloader() {
           transition={{ duration: 0.75, ease: luxe }}
         >
           {/* Z‿nith — the smile draws left to right, as on the signage */}
-          <div className="flex items-baseline font-display text-6xl font-medium tracking-tight text-ink sm:text-7xl">
+          <div className="flex items-baseline font-display text-7xl font-medium tracking-tight text-ink sm:text-8xl">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,10 +83,10 @@ export function Preloader() {
           </div>
 
           <motion.p
-            className="font-display text-xs font-medium tracking-[0.34em] text-champagne"
+            className="font-display text-sm font-medium tracking-[0.42em] text-champagne sm:text-base"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: luxe, delay: 1.6 }}
+            transition={{ duration: 0.55, ease: luxe, delay: 1.35 }}
           >
             THE DENTAL STUDIO
           </motion.p>
