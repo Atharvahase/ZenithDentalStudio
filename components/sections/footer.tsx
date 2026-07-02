@@ -1,4 +1,5 @@
 import { clinic } from '@/lib/content'
+import { Wordmark } from '@/components/wordmark'
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end">
           <div>
-            <p className="flex items-center gap-2.5 font-display text-sm tracking-[0.28em]">
+            <p className="flex items-center gap-2.5">
               <img
                 src="/images/logo.jpg"
                 alt=""
@@ -15,7 +16,7 @@ export function Footer() {
                 loading="lazy"
                 className="size-9 rounded-full bg-white object-cover"
               />
-              ZENITH<span className="text-champagne-soft"> · THE DENTAL STUDIO</span>
+              <Wordmark className="text-sm" taglineClassName="text-champagne-soft" />
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-porcelain/60">
               A private dental studio on College Road, {clinic.address.locality} — smile design,

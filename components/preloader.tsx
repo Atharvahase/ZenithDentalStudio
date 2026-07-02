@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
+import { Wordmark } from './wordmark'
 
 const luxe = [0.22, 1, 0.36, 1] as const
 
@@ -43,12 +44,11 @@ export function Preloader() {
             transition={{ duration: 0.55, ease: luxe }}
           />
           <motion.p
-            className="font-display text-xs font-medium tracking-[0.32em] text-ink"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: luxe, delay: 0.25 }}
           >
-            ZENITH<span className="text-champagne"> · THE DENTAL STUDIO</span>
+            <Wordmark className="text-xs text-ink" taglineClassName="text-champagne" />
           </motion.p>
           <motion.span
             className="h-px bg-champagne"

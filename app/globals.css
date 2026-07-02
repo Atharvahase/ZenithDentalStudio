@@ -13,6 +13,8 @@
   --color-hairline-light: rgb(250 248 245 / 0.16);
   --color-whatsapp: #25d366;
   --color-whatsapp-deep: #1da851;
+  /* Teal sampled from the Zenith logo's tooth mark and smiling e */
+  --color-brand: #3fb5ac;
 
   --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
 }

@@ -1,3 +1,25 @@
+/**
+ * The brand's smiling "e" — in the Zenith logo the letter e is drawn as a
+ * teal smile arc with a small hook above it. Used inside the ZENITH
+ * wordmark so the signature detail carries into the site typography.
+ */
+export function SmileE({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 26"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.4"
+      strokeLinecap="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M18.5 2.2c-3.8.5-5 3.3-3.6 6.3" />
+      <path d="M3 12.5c3.7 6.6 9.1 9.9 13 9.9s9.3-3.3 13-9.9" />
+    </svg>
+  )
+}
+
 /** Instagram glyph — lucide-react v1 removed brand icons, so it lives here. */
 export function InstagramIcon({ className }: { className?: string }) {
   return (
