@@ -1,3 +1,4 @@
+import { Preloader } from '@/components/preloader'
 import { Navbar } from '@/components/sections/navbar'
 import { Hero } from '@/components/sections/hero'
 import { Treatments } from '@/components/sections/treatments'
@@ -16,6 +17,7 @@ import { WhatsAppFab } from '@/components/whatsapp-fab'
 export default function Page() {
   return (
     <>
+      <Preloader />
       <Navbar />
       <main id="main">
         <Hero />

@@ -26,8 +26,7 @@ export const clinic = {
   mapQuery: 'Zenith Dental Studio, College Road, Nashik',
   mapsDirectionsUrl:
     'https://www.google.com/maps/search/?api=1&query=Zenith+Dental+Studio+College+Road+Nashik',
-  googleReviewsUrl:
-    'https://www.google.com/maps/search/Zenith+Dental+Studio+College+Road+Nashik',
+  googleReviewsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJLwgm0XXr3TsR3_IVZqR5gyU',
   instagram: 'https://www.instagram.com/zenithdentalstudio',
   // 10 am–9 pm confirmed via Google listing; Sunday unconfirmed — TODO(clinic).
   hours: [
@@ -49,10 +48,10 @@ export const hero = {
   sub: 'Precision dentistry in a calm, considered space — for people who notice the difference.',
   primaryCta: 'Book a consultation',
   secondaryCta: 'Explore treatments',
-  // 4.9 rating: public Justdial listing (36 reviews), verified 2026-07-02.
+  // 5.0 rating: Google listing (50 reviews), verified 2026-07-02.
   stats: [
     { value: '2', label: 'Specialists, one standard' },
-    { value: '4.9★', label: 'Patient rating' },
+    { value: '5.0★', label: 'Google rating · 50 reviews' },
     { value: 'MDS', label: 'Prosthodontist-led care' },
   ],
 }
@@ -163,23 +162,24 @@ export const doctors: Doctor[] = [
   },
 ]
 
-// TODO(clinic): replace with real patient reviews (with permission).
-// These are illustrative placeholders and must not ship to production.
+// Genuine Google review excerpts, as surfaced publicly in the clinic's
+// Google knowledge panel (5.0★, 50 reviews — verified 2026-07-02).
+// Swap in named full-length reviews anytime from the Google listing.
 export const testimonials = [
   {
-    quote: 'The most considered medical experience I have had. Every step was explained, nothing was rushed, and the result is better than I imagined.',
-    name: 'A. Mehta',
-    context: 'Smile design',
+    quote: 'Excellent service, highly professional doctors.',
+    name: 'Google review',
+    context: 'Verified patient',
   },
   {
-    quote: 'I avoided dentists for a decade. This place changed that — it feels closer to a design studio than a clinic.',
-    name: 'R. Kapoor',
-    context: 'Full-mouth rehabilitation',
+    quote: 'I highly recommend them for anyone looking for quality dental care.',
+    name: 'Google review',
+    context: 'Verified patient',
   },
   {
-    quote: 'Booked on WhatsApp at 9pm, consulted the next evening. Seamless from the first message.',
-    name: 'S. Iyer',
-    context: 'Root canal treatment',
+    quote: 'He treated my condition very well and provided excellent care.',
+    name: 'Google review',
+    context: 'Verified patient',
   },
 ]
 

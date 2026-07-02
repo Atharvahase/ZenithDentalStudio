@@ -100,6 +100,19 @@ footer[id] {
     linear-gradient(165deg, #3a342e 0%, #241f1b 55%, #16130f 100%);
 }
 
+/* No-JS safety net: if scripts never run, the intro curtain fades itself
+   away so it can't permanently cover the page. JS unmounts it earlier. */
+@keyframes preloader-hide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.preloader {
+  animation: preloader-hide 0.6s ease 2.4s forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

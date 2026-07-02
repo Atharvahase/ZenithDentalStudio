@@ -40,12 +40,8 @@ export function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="mt-12 flex flex-col gap-3 border-t border-hairline-light pt-6 text-xs text-porcelain/45 md:flex-row md:justify-between">
+        <div className="mt-12 border-t border-hairline-light pt-6 text-xs text-porcelain/45">
           <p>© {new Date().getFullYear()} {clinic.name}. All rights reserved.</p>
-          <p>
-            This site runs entirely in your browser — no cookies, no trackers, and nothing you
-            type is stored. Bookings happen on WhatsApp.
-          </p>
         </div>
       </div>
     </footer>

@@ -35,9 +35,9 @@ export function Testimonials() {
               rel="noopener noreferrer"
               className="group inline-flex cursor-pointer items-baseline gap-3"
             >
-              <span className="font-display text-4xl tracking-tight text-champagne-soft">4.9★</span>
+              <span className="font-display text-4xl tracking-tight text-champagne-soft">5.0★</span>
               <span className="text-sm text-porcelain/70 underline decoration-champagne-soft/50 underline-offset-4 transition-colors group-hover:text-porcelain">
-                rated on Google — read our reviews
+                50 reviews on Google — read them all
               </span>
             </a>
           </Reveal>

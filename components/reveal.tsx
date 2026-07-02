@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import type { ReactNode } from 'react'
 
 /**
@@ -22,20 +22,25 @@ export function Reveal({
   delay?: number
   className?: string
 }) {
+  const reduced = useReducedMotion()
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.55, ease: luxe, delay }}
+      transition={{ duration: reduced ? 0 : 0.55, ease: luxe, delay: reduced ? 0 : delay }}
     >
       {children}
     </motion.div>
   )
 }
 
-/** Masked line reveal for the hero headline — lines rise out of an overflow clip. */
+/**
+ * Masked line reveal for the hero headline — lines rise out of an overflow
+ * clip. The padding/negative-margin pair gives serif descenders (the italic
+ * "g") room inside the clip box so they don't get cut off.
+ */
 export function LineReveal({
   children,
   delay = 0,
@@ -45,13 +50,14 @@ export function LineReveal({
   delay?: number
   className?: string
 }) {
+  const reduced = useReducedMotion()
   return (
-    <span className={`block overflow-hidden ${className ?? ''}`}>
+    <span className={`-mb-[0.18em] block overflow-hidden pb-[0.18em] ${className ?? ''}`}>
       <motion.span
         className="block will-change-transform"
-        initial={{ y: '112%' }}
+        initial={{ y: '118%' }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: luxe, delay }}
+        transition={{ duration: reduced ? 0 : 0.8, ease: luxe, delay: reduced ? 0 : delay }}
       >
         {children}
       </motion.span>
@@ -69,12 +75,13 @@ export function FadeIn({
   delay?: number
   className?: string
 }) {
+  const reduced = useReducedMotion()
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: luxe, delay }}
+      transition={{ duration: reduced ? 0 : 0.6, ease: luxe, delay: reduced ? 0 : delay }}
     >
       {children}
     </motion.div>
