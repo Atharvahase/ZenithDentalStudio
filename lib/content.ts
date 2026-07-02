@@ -21,14 +21,17 @@ export const clinic = {
     postalCode: '422005',
     country: 'IN',
   },
+  landmark: 'Beside KK Cosmetics Mall, in front of Kathiawadi Dhaba',
   // Feeds the free Google Maps embed (no API key).
   mapQuery: 'Zenith Dental Studio, College Road, Nashik',
   mapsDirectionsUrl:
     'https://www.google.com/maps/search/?api=1&query=Zenith+Dental+Studio+College+Road+Nashik',
+  googleReviewsUrl:
+    'https://www.google.com/maps/search/Zenith+Dental+Studio+College+Road+Nashik',
   instagram: 'https://www.instagram.com/zenithdentalstudio',
-  // TODO(clinic): confirm working hours — placeholder pending confirmation.
+  // 10 am–9 pm confirmed via Google listing; Sunday unconfirmed — TODO(clinic).
   hours: [
-    { days: 'Monday — Saturday', time: '10:00 — 20:00' },
+    { days: 'Monday — Saturday', time: '10:00 — 21:00' },
     { days: 'Sunday', time: 'By appointment' },
   ],
   // TODO(clinic): production domain once purchased — used for canonical URL,
@@ -143,16 +146,18 @@ export type Doctor = {
   image: string
 }
 
+// Credentials sourced from the clinic's "Meet your dentist" Instagram posts
+// and the studio nameboard.
 export const doctors: Doctor[] = [
   {
     name: 'Dr. Atish Raundal',
-    credentials: 'MDS — Prosthodontist',
+    credentials: 'BDS, MDS — Prosthodontics & Crown-Bridge · Oral Implantologist',
     philosophy: '“Good dentistry should be invisible. People should notice you, not the work.”',
     image: '/images/dr-atish.jpg',
   },
   {
     name: 'Dr. Apurva Raundal',
-    credentials: 'BDS — Comprehensive Dentist',
+    credentials: 'BDS — Comprehensive Dentistry',
     philosophy: '“Trust is built in the details — how we listen, plan, and follow through.”',
     image: '/images/dr-apurva.jpg',
   },

@@ -23,8 +23,9 @@ export function Visit() {
                   <p className="mt-1 leading-relaxed text-muted">
                     {clinic.address.street}
                     <br />
-                    {clinic.address.locality}
+                    {clinic.address.locality} — {clinic.address.postalCode}
                   </p>
+                  <p className="mt-1 text-sm text-muted/80">{clinic.landmark}</p>
                   <a
                     href={clinic.mapsDirectionsUrl}
                     target="_blank"

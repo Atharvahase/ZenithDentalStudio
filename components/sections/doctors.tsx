@@ -13,11 +13,15 @@ export function Doctors() {
         {doctors.map((d, i) => (
           <Reveal key={d.name} delay={i * 0.12}>
             <article className="group">
-              {/* Portrait slot — monogram placeholder until the clinic shoot */}
-              <div className="photo-slot--dark photo-slot flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl">
-                <span className="accent-serif text-[7rem] text-champagne-soft/80 transition-transform duration-500 ease-out group-hover:scale-105">
-                  {d.name.replace('Dr. ', '').charAt(0)}
-                </span>
+              <div className="overflow-hidden rounded-2xl bg-ink/5">
+                <img
+                  src={d.image}
+                  alt={`${d.name} at Zenith Dental Studio`}
+                  width={430}
+                  height={752}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                />
               </div>
               <h3 className="mt-7 font-display text-2xl tracking-tight text-ink">{d.name}</h3>
               <p className="mt-1 text-sm tracking-wide text-champagne">{d.credentials}</p>

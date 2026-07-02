@@ -29,12 +29,16 @@ export function Hero() {
           </FadeIn>
         </div>
 
-        {/* Studio photography slot — replaced by the clinic shoot (PRD §7.3) */}
         <FadeIn delay={0.35} className="lg:col-span-5">
-          <div className="photo-slot flex aspect-[4/5] w-full items-end rounded-2xl p-6">
-            <p className="text-xs tracking-[0.2em] uppercase text-porcelain/80">
-              The studio — photography arriving with the clinic shoot
-            </p>
+          <div className="overflow-hidden rounded-2xl bg-ink/5">
+            <img
+              src="/images/clinic-facade.jpg"
+              alt="Zenith Dental Studio on College Road, Nashik"
+              width={640}
+              height={1136}
+              fetchPriority="high"
+              className="aspect-[4/5] w-full object-cover"
+            />
           </div>
         </FadeIn>
       </div>

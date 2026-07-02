@@ -6,8 +6,16 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end">
           <div>
-            <p className="font-display text-sm tracking-[0.28em]">
-              ZENITH<span className="text-champagne-soft"> DENTAL STUDIO</span>
+            <p className="flex items-center gap-2.5 font-display text-sm tracking-[0.28em]">
+              <img
+                src="/images/logo.jpg"
+                alt=""
+                width={320}
+                height={320}
+                loading="lazy"
+                className="size-9 rounded-full bg-white object-cover"
+              />
+              ZENITH<span className="text-champagne-soft"> · THE DENTAL STUDIO</span>
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-porcelain/60">
               A private dental studio on College Road, {clinic.address.locality} — smile design,

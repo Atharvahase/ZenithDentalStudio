@@ -43,8 +43,17 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="font-display text-sm font-medium tracking-[0.28em] text-ink">
-          ZENITH<span className="text-champagne"> DENTAL STUDIO</span>
+        <a href="#top" className="flex items-center gap-2.5">
+          <img
+            src="/images/logo.jpg"
+            alt=""
+            width={320}
+            height={320}
+            className="size-9 rounded-full border border-hairline bg-white object-cover"
+          />
+          <span className="font-display text-sm font-medium tracking-[0.28em] text-ink">
+            ZENITH<span className="hidden text-champagne sm:inline"> · THE DENTAL STUDIO</span>
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
