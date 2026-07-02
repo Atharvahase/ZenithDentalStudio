@@ -4,9 +4,9 @@ import { LineReveal, FadeIn } from '@/components/reveal'
 import { WaButton, GhostLink, Eyebrow } from '@/components/ui'
 
 // Hero entrances are delayed so they play as the Preloader curtain lifts
-// (~1.4s). Reveal components drop delays to 0 under reduced motion, where
-// the curtain never shows.
-const INTRO = 1.15
+// (EXIT_AT_MS ≈ 2.6s). Reveal components drop delays to 0 under reduced
+// motion, where the curtain never shows.
+const INTRO = 2.35
 
 export function Hero() {
   return (
