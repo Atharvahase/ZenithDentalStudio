@@ -12,7 +12,7 @@ import { WhatsAppIcon } from '@/components/icons'
  */
 export function Composer() {
   const [name, setName] = useState('')
-  const [treatment, setTreatment] = useState('Not sure yet — advise me')
+  const [treatment, setTreatment] = useState('Not sure yet, advise me')
   const [preference, setPreference] = useState('')
   const [touched, setTouched] = useState(false)
 
@@ -40,7 +40,7 @@ export function Composer() {
     >
       <p className="font-display text-xl tracking-tight">Compose your booking message</p>
       <p className="mt-1.5 text-sm leading-relaxed text-muted">
-        Three details, one tap — we reply personally on WhatsApp.
+        Three details, one tap. We reply personally on WhatsApp.
       </p>
 
       <div className="mt-7 space-y-5">
@@ -78,7 +78,7 @@ export function Composer() {
             onChange={(e) => setTreatment(e.target.value)}
             className={`${field} cursor-pointer appearance-none border-hairline`}
           >
-            <option>Not sure yet — advise me</option>
+            <option>Not sure yet, advise me</option>
             {treatments.map((t) => (
               <option key={t.id} value={t.name}>
                 {t.name}

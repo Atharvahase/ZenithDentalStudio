@@ -1,0 +1,26 @@
+{
+  "rating": 5,
+  "count": 50,
+  "source": "Google",
+  "fetchedAt": "2026-07-15T00:00:00Z",
+  "reviews": [
+    {
+      "author": "Google review",
+      "rating": 5,
+      "text": "Excellent service, highly professional doctors.",
+      "publishTime": null
+    },
+    {
+      "author": "Google review",
+      "rating": 5,
+      "text": "I highly recommend them for anyone looking for quality dental care.",
+      "publishTime": null
+    },
+    {
+      "author": "Google review",
+      "rating": 5,
+      "text": "He treated my condition very well and provided excellent care.",
+      "publishTime": null
+    }
+  ]
+}

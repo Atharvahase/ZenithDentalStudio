@@ -24,9 +24,9 @@ const inter = Inter({
   display: 'swap',
 })
 
-const title = `${clinic.name} — Luxury Dental Care, ${clinic.city}`
+const title = `${clinic.name} | Luxury Dental Care, ${clinic.city}`
 const description =
-  'A private dental studio in Nashik for smile design, dental implants, crowns & bridges, root canal treatment and family dentistry. Book a consultation on WhatsApp — one tap, no forms.'
+  'A private dental studio in Nashik for smile design, dental implants, crowns & bridges, root canal treatment and family dentistry. Book a consultation on WhatsApp in one tap, no forms.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(clinic.siteUrl),

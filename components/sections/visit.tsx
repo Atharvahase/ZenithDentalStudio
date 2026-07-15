@@ -23,7 +23,7 @@ export function Visit() {
                   <p className="mt-1 leading-relaxed text-muted">
                     {clinic.address.street}
                     <br />
-                    {clinic.address.locality} — {clinic.address.postalCode}
+                    {clinic.address.locality} {clinic.address.postalCode}
                   </p>
                   <p className="mt-1 text-sm text-muted/80">{clinic.landmark}</p>
                   <a
@@ -88,7 +88,7 @@ export function Visit() {
             <div className="h-full min-h-[360px] overflow-hidden rounded-2xl border border-hairline">
               <iframe
                 src={mapSrc}
-                title={`Map — ${clinic.name}`}
+                title={`Map: ${clinic.name}`}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-full min-h-[360px] w-full"

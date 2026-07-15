@@ -30,9 +30,9 @@ export const clinic = {
   // Maps app. Verified to resolve to the clinic's listing.
   googleReviewsUrl: 'https://maps.google.com/?cid=2703137948346741471',
   instagram: 'https://www.instagram.com/zenithdentalstudio',
-  // 10 am–9 pm confirmed via Google listing; Sunday unconfirmed — TODO(clinic).
+  // 10 am to 9 pm confirmed via Google listing; Sunday unconfirmed (TODO clinic).
   hours: [
-    { days: 'Monday — Saturday', time: '10:00 — 21:00' },
+    { days: 'Monday to Saturday', time: '10 am to 9 pm' },
     { days: 'Sunday', time: 'By appointment' },
   ],
   // TODO(clinic): production domain once purchased — used for canonical URL,
@@ -47,7 +47,7 @@ export const hero = {
     { plain: 'Your smile,' },
     { plain: '', accent: 'designed.' },
   ],
-  sub: 'Precision dentistry in a calm, considered space — for people who notice the difference.',
+  sub: 'Precision dentistry in a calm, considered space, for people who notice the difference.',
   primaryCta: 'Book a consultation',
   secondaryCta: 'Explore treatments',
   // 5.0 rating: Google listing (50 reviews), verified 2026-07-02.
@@ -68,7 +68,7 @@ export const treatments: Treatment[] = [
   {
     id: 'smile-design',
     name: 'Smile Design & Cosmetic Dentistry',
-    promise: 'Veneers, whitening and contouring — planned digitally, finished by hand to suit your face.',
+    promise: 'Veneers, whitening and contouring, planned digitally and finished by hand to suit your face.',
   },
   {
     id: 'implants',
@@ -83,7 +83,7 @@ export const treatments: Treatment[] = [
   {
     id: 'root-canal',
     name: 'Root Canal Treatment',
-    promise: 'Gentle, modern endodontics that saves the tooth — comfort managed at every step.',
+    promise: 'Gentle, modern endodontics that saves the tooth, with comfort managed at every step.',
   },
   {
     id: 'full-mouth',
@@ -100,7 +100,7 @@ export const treatments: Treatment[] = [
 export const pillars = [
   {
     title: 'Artistry',
-    body: 'Every case is designed before it is treated. Proportion, shade and character are decisions we make with you — dentistry as a considered aesthetic practice.',
+    body: 'Every case is designed before it is treated. Proportion, shade and character are decisions we make with you: dentistry as a considered aesthetic practice.',
   },
   {
     title: 'Precision',
@@ -108,7 +108,7 @@ export const pillars = [
   },
   {
     title: 'The Studio',
-    body: 'One patient at a time. No waiting-room churn, no rush — a private, quiet space designed around your comfort.',
+    body: 'One patient at a time. No waiting-room churn, no rush. A private, quiet space designed around your comfort.',
   },
 ]
 
@@ -116,12 +116,12 @@ export const journey = [
   {
     step: '01',
     title: 'Message us on WhatsApp',
-    body: 'One tap, no forms, no phone queue. Tell us what you have in mind — we reply personally.',
+    body: 'One tap, no forms, no phone queue. Tell us what you have in mind. We reply personally.',
   },
   {
     step: '02',
     title: 'Private consultation',
-    body: 'A full assessment and an honest conversation about what suits you — never a sales pitch.',
+    body: 'A full assessment and an honest conversation about what suits you. Never a sales pitch.',
   },
   {
     step: '03',
@@ -152,59 +152,42 @@ export type Doctor = {
 export const doctors: Doctor[] = [
   {
     name: 'Dr. Atish Raundal',
-    credentials: 'BDS, MDS — Prosthodontics & Crown-Bridge · Oral Implantologist',
+    credentials: 'BDS, MDS (Prosthodontics & Crown-Bridge) · Oral Implantologist',
     philosophy: '“Good dentistry should be invisible. People should notice you, not the work.”',
     image: '/images/dr-atish.jpg',
   },
   {
     name: 'Dr. Apurva Raundal',
-    credentials: 'BDS — Comprehensive Dentistry',
-    philosophy: '“Trust is built in the details — how we listen, plan, and follow through.”',
+    credentials: 'BDS · Comprehensive Dentistry',
+    philosophy: '“Trust is built in the details: how we listen, plan, and follow through.”',
     image: '/images/dr-apurva.jpg',
   },
 ]
 
-// Genuine Google review excerpts, as surfaced publicly in the clinic's
-// Google knowledge panel (5.0★, 50 reviews — verified 2026-07-02).
-// Swap in named full-length reviews anytime from the Google listing.
-export const testimonials = [
-  {
-    quote: 'Excellent service, highly professional doctors.',
-    name: 'Google review',
-    context: 'Verified patient',
-  },
-  {
-    quote: 'I highly recommend them for anyone looking for quality dental care.',
-    name: 'Google review',
-    context: 'Verified patient',
-  },
-  {
-    quote: 'He treated my condition very well and provided excellent care.',
-    name: 'Google review',
-    context: 'Verified patient',
-  },
-]
+// Patient reviews now live in lib/reviews.json (seeded with verified
+// knowledge-panel excerpts; refreshed by scripts/fetch-reviews.mjs via the
+// weekly GitHub Action once GOOGLE_PLACES_API_KEY is configured).
 
 export const faqs = [
   {
     q: 'How does a consultation work?',
-    a: 'Message us on WhatsApp and we will agree a time that suits you. Your first visit is a relaxed, thorough assessment — photographs, a scan where useful, and an honest conversation about options. No treatment happens before you have a clear plan.',
+    a: 'Message us on WhatsApp and we will agree a time that suits you. Your first visit is a relaxed, thorough assessment: photographs, a scan where useful, and an honest conversation about options. No treatment happens before you have a clear plan.',
   },
   {
     q: 'Will treatment hurt?',
-    a: 'Comfort is engineered into everything we do — modern anaesthesia, gentle technique, and a pace set by you. Most patients tell us the anticipation was the worst part.',
+    a: 'Comfort is engineered into everything we do: modern anaesthesia, gentle technique, and a pace set by you. Most patients tell us the anticipation was the worst part.',
   },
   {
     q: 'How do you handle sterilisation and safety?',
-    a: 'Instrument sterilisation follows a strict, documented protocol with sealed, single-patient kits. Ask us on your visit — we are happy to show you.',
+    a: 'Instrument sterilisation follows a strict, documented protocol with sealed, single-patient kits. Ask us on your visit; we are happy to show you.',
   },
   {
     q: 'Do you show prices on the website?',
-    a: 'No — because honest pricing follows a proper diagnosis. After your consultation you receive a written plan with exact costs before anything begins.',
+    a: 'No. Honest pricing follows a proper diagnosis, so after your consultation you receive a written plan with exact costs before anything begins.',
   },
   {
     q: 'Can I see examples of your work?',
-    a: 'Yes — consented before/after cases are shown at the studio and on our Instagram, and your consultation will include cases similar to yours.',
+    a: 'Yes. Consented before/after cases are shown at the studio and on our Instagram, and your consultation will include cases similar to yours.',
   },
   {
     q: 'How soon can I get an appointment?',
@@ -215,7 +198,7 @@ export const faqs = [
 export const finalCta = {
   headlinePlain: 'Your smile, ',
   headlineAccent: 'designed.',
-  sub: 'Begin with a conversation — no forms, no waiting on hold.',
+  sub: 'Begin with a conversation. No forms, no waiting on hold.',
   cta: 'Talk to us on WhatsApp',
 }
 

@@ -1,0 +1,37 @@
+# Refreshes lib/reviews.json with the latest Google reviews once a week.
+# Needs the GOOGLE_PLACES_API_KEY repository secret (Settings → Secrets →
+# Actions). Without it, the run is a quiet no-op. A commit here triggers
+# the normal Vercel deploy, so fresh reviews go live automatically.
+name: Refresh Google reviews
+
+on:
+  schedule:
+    - cron: '17 3 * * 1' # Mondays 03:17 UTC (~08:47 IST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch latest reviews
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: node scripts/fetch-reviews.mjs
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet lib/reviews.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add lib/reviews.json
+            git commit -m "chore: refresh Google reviews"
+            git push
+          else
+            echo "No changes."
+          fi

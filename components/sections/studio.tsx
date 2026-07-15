@@ -6,7 +6,7 @@ const spaces: { caption: string; note: string; tall: boolean; image?: string; al
   { caption: 'The private suite', note: 'One patient at a time', tall: true },
   {
     caption: 'Digital-first dentistry',
-    note: 'Intraoral scanning — precision without impressions',
+    note: 'Intraoral scanning, precision without impressions',
     tall: false,
     image: '/images/scanner.jpg',
     alt: 'Intraoral scanner kit at Zenith Dental Studio',

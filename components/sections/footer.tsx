@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-porcelain/60">
-              A private dental studio on College Road, {clinic.address.locality} — smile design,
+              A private dental studio on College Road, {clinic.address.locality}: smile design,
               implants, crowns &amp; bridges and considered everyday care.
             </p>
           </div>
